@@ -1,0 +1,28 @@
+package markup;
+
+import java.util.List;
+
+public class UnorderedList extends AbstractList {
+    private static final String BBCodeLeftTag = "[list]";
+    private static final String BBCodeRightTag = "[/list]";
+    private static final String MarkdownTag = null;
+
+    public UnorderedList(List<ListItem> listItems) {
+        super(listItems);
+    }
+
+    @Override
+    protected String getBBCodeLeftTag() {
+        return BBCodeLeftTag;
+    }
+
+    @Override
+    protected String getBBCodeRightTag() {
+        return BBCodeRightTag;
+    }
+
+    @Override
+    protected String getMarkdownTag() {
+        throw new UnsupportedOperationException();
+    }
+}
